@@ -1,16 +1,30 @@
 $primary:       #15c5bd !default;
 $secondary:     #303030 !default;
 $heigth-index: 85vh;
+$bellota-regular: 'bellotaregular';
+
+@font-face {
+    font-family: 'bellotaregular';
+    src: url('../fonts/bellota-regular/Bellota-Regular-webfont.eot');
+    src: url('../fonts/bellota-regular/Bellota-Regular-webfont.eot') format('embedded-opentype'),
+         url('../fonts/bellota-regular/Bellota-Regular-webfont.woff') format('woff'),
+         url('../fonts/bellota-regular/Bellota-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/bellota-regular/Bellota-Regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 *{
     margin: 0 !important;
     padding: 0 !important;
 }
 
+
+
 body{
     margin: 0 auto;
     height: 100vh;
-    background-image:url("/assets/img/harrison-broadbent-c3YpscwJb04-unsplash.jpg");
+    background-image:url("../img/harrison-broadbent-c3YpscwJb04-unsplash.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -21,7 +35,12 @@ nav{
   //  background: $primary;
     background: linear-gradient(0deg, $primary 1%, rgba(17,167,160,1) 100%);
     height: 15vh;
+    box-shadow: 0 4px 15px 10px rgba(0,0,0,.1);
     a{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        font-family: $bellota-regular,sans-serif;
+        font-size: 2rem;
         img{
             width: 100px;
         }
@@ -45,7 +64,7 @@ nav{
                 height: 100%;
                 
                 h1{
-        
+                    font-family: $bellota-regular, sans-serif;
                     font-size: 5rem;
                 }
                 p{
