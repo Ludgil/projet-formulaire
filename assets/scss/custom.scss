@@ -18,7 +18,7 @@ body{
 // NAVIGATION 
 
 nav{
-    background: $primary;
+  //  background: $primary;
     background: linear-gradient(0deg, $primary 1%, rgba(17,167,160,1) 100%);
     height: 15vh;
     a{
@@ -28,9 +28,15 @@ nav{
     }
 }
 
+.container-fluid{
+    margin-top: 15vh !important;
+}
+
+
+
+
 
 // JUMBOTRON
-
 #jumbo {
      .jumbotron{
         height: $heigth-index;
@@ -77,5 +83,15 @@ nav{
     }
 }
 
+#sign-up{
+    height: 45vh;
+    .row{
+        height: 45vh;
+    }
+}
 
+footer{
+    height: 40vh;
+    background: $secondary;
+}
 

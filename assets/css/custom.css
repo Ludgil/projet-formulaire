@@ -12,7 +12,6 @@ body {
 }
 
 nav {
-  background: #15c5bd;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, #15c5bd), to(#11a7a0));
   background: linear-gradient(0deg, #15c5bd 1%, #11a7a0 100%);
   height: 15vh;
@@ -20,6 +19,10 @@ nav {
 
 nav a img {
   width: 100px;
+}
+
+.container-fluid {
+  margin-top: 15vh !important;
 }
 
 #jumbo .jumbotron {
@@ -62,5 +65,18 @@ nav a img {
 #shop-preview .row .card-deck .card {
   margin-left: 20px !important;
   margin-right: 20px !important;
+}
+
+#sign-up {
+  height: 45vh;
+}
+
+#sign-up .row {
+  height: 45vh;
+}
+
+footer {
+  height: 40vh;
+  background: #303030;
 }
 /*# sourceMappingURL=custom.css.map */
