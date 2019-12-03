@@ -35,6 +35,7 @@ nav a {
 
 nav a img {
   width: 50%;
+  height: auto;
 }
 
 .container-fluid {
