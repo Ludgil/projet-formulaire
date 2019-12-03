@@ -26,14 +26,18 @@ nav {
           box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
+nav .navbar-brand img {
+  width: 150px;
+}
+
+nav .navbar-nav a {
   margin-left: 20px !important;
   margin-right: 20px !important;
   font-family: "bellotaregular", sans-serif;
   font-size: 2rem;
 }
 
-nav a img {
+nav .navbar-nav a img {
   width: 50%;
   height: auto;
 }

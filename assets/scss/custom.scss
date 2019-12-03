@@ -19,8 +19,6 @@ $bellota-regular: 'bellotaregular';
     padding: 0 !important;
 }
 
-
-
 body{
     margin: 0 auto;
     height: 100vh;
@@ -35,16 +33,27 @@ nav{
     background: $secondary;    
     height: 15vh;
     box-shadow: 0 4px 15px 10px rgba(0,0,0,.1);
-    a{
-        margin-left: 20px !important;
-        margin-right: 20px !important;
-        font-family: $bellota-regular,sans-serif;
-        font-size: 2rem;
+
+    .navbar-brand{
         img{
-            width: 50%;
-            height: auto;
+        width: 150px;
         }
     }
+
+   .navbar-nav{
+        a{
+            margin-left: 20px !important;
+            margin-right: 20px !important;
+            font-family: $bellota-regular,sans-serif;
+            font-size: 2rem;
+            img{
+                width: 50%;
+                height: auto;
+            }
+    }
+
+   }
+    
 }
 
 .container-fluid{
