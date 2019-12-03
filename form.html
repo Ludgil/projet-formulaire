@@ -9,59 +9,62 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/lab.css">
+    <link rel="stylesheet" href="assets/css/form.css">
 </head>
 
 <body>
     <div id="formulare" class="w-100">
         <div class="row align-content-center">
+            <div id="resultat">
+                <!-- Nous allons afficher un retour en jQuery au visiteur -->
+            </div>
             <form action="checkForm.php" method="post">
                 <header>
                     <h1>CONTACT FORM</h1>
                     <h3>Easily add subscribe and contact forms without any server-side integration.</h3>
                 </header>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-sm-11 col-md-3">
                         <div class="row">
                             <div class="col-12">
-                                Firstname
+                                <label> Firstname</label>
                             </div>
                             <div class="col-12">
-                                <input type="text" name="userName" id="">
+                                <input type="text" name="usFirstname" id="idFirstname" required>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-3">
                         <div class="row">
                             <div class="col-12">
-                                Firstname
+                                <label>Lastname</label>
                             </div>
                             <div class="col-12">
-                                <input type="text" name="userName" id="">
+                                <input type="text" name="usLastname" id="idLastname" required>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-3">
                         <div class="row">
                             <div class="col-12">
-                                Firstname
+                                <label>Mail</label>
                             </div>
                             <div class="col-12">
-                                <input type="text" name="userName" id="">
+                                <input type="mail" name="usMail" id="idMail" required>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-5">
                     <div class="col-12">
-                        Message
+                        <label> Message</label>
                     </div>
                     <div class="col-12">
                         <select name="userSubject" id="formMessSubject">
                             <option value="0">Make your choice</option>
                             <option value="1">Technical Support</option>
                             <option value="2">Commercial Support</option>
-                            <option value="3">Other</option>
+                            <option value="3">Other Subject</option>
                         </select>
                     </div>
                     <div class="col-12">
@@ -70,17 +73,17 @@
 
                 </div>
                 <div class="row mt-3 mb-3">
-                    <textarea name="" id=""></textarea>
+                    <textarea name="userMessage" id="idformMessage" required></textarea>
                 </div>
-                <div class="row btn-file justify-content-around w-75">
-                    <div class="col-12  position-relative">
-                        <button class="btn btn-info btn-lg position-absolute">Choose a file</button>
-                        <input type="file" name="userFile" id="btnFile" class="position-absolute">
+                <div class="row btn-file">
+                    <div class="position-relative">
+                        <button class="btn btn-primary">Choose a file</button>
+                        <input type="file" name="userFile" id="btnFile">
                     </div>
                 </div>
-                <div class="row position-relative">
+                <div class="row mb-5">
                     <div class="col-12">
-                        <div class="btn btn-success">Envoyer</div>
+                        <button id="btnSubmit" type="submit" class=" btn btn-success">Send Form</button>
                     </div>
                 </div>
             </form>
