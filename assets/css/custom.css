@@ -20,8 +20,7 @@ body {
 }
 
 nav {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, #15c5bd), to(#11a7a0));
-  background: linear-gradient(0deg, #15c5bd 1%, #11a7a0 100%);
+  background: #303030;
   height: 15vh;
   -webkit-box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.1);
@@ -35,7 +34,7 @@ nav a {
 }
 
 nav a img {
-  width: 100px;
+  width: 50%;
 }
 
 .container-fluid {
@@ -47,25 +46,22 @@ nav a img {
   background: transparent;
 }
 
-#jumbo .jumbotron div {
-  height: 100%;
-}
-
-#jumbo .jumbotron div h1 {
+#jumbo .jumbotron h1 {
   font-family: "bellotaregular", sans-serif;
   font-size: 5rem;
+  margin-bottom: 20px !important;
 }
 
-#jumbo .jumbotron div p {
+#jumbo .jumbotron p {
   font-size: 2rem;
+  margin-bottom: 20px !important;
 }
 
-#jumbo .jumbotron div a {
+#jumbo .jumbotron a {
   text-decoration: none;
-  background-color: #15c5bd;
-  border-radius: 25px;
+  background-color: #303030;
   font-size: 1.6rem;
-  padding: 15px;
+  padding: 10px !important;
 }
 
 #shop-preview {
@@ -77,12 +73,18 @@ nav a img {
 }
 
 #shop-preview .row .card-deck {
-  margin: 20px !important;
+  margin: 15px !important;
 }
 
 #shop-preview .row .card-deck .card {
+  background: #303030;
   margin-left: 20px !important;
   margin-right: 20px !important;
+}
+
+#shop-preview .row .card-deck .card .card-text {
+  background: #303030;
+  color: #15c5bd;
 }
 
 #sign-up {

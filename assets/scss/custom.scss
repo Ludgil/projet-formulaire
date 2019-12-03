@@ -32,8 +32,7 @@ body{
 // NAVIGATION 
 
 nav{
-  //  background: $primary;
-    background: linear-gradient(0deg, $primary 1%, rgba(17,167,160,1) 100%);
+    background: $secondary;    
     height: 15vh;
     box-shadow: 0 4px 15px 10px rgba(0,0,0,.1);
     a{
@@ -42,7 +41,7 @@ nav{
         font-family: $bellota-regular,sans-serif;
         font-size: 2rem;
         img{
-            width: 100px;
+            width: 50%;
         }
     }
 }
@@ -60,26 +59,23 @@ nav{
      .jumbotron{
         height: $heigth-index;
         background: transparent;
-            div{
-                height: 100%;
-                
+            
                 h1{
                     font-family: $bellota-regular, sans-serif;
                     font-size: 5rem;
+                    margin-bottom: 20px !important;
                 }
                 p{
                     font-size: 2rem;
+                    margin-bottom: 20px !important;
                 }
                 a{
                     text-decoration: none;
-                    background-color: $primary;
-                    border-radius:25px;
+                    background-color: $secondary;
                     font-size: 1.6rem;
-                    padding:15px;
-                    
-                   
+                    padding: 10px !important;       
                 }
-            } 
+            
     }
     
 }
@@ -87,18 +83,20 @@ nav{
 
 #shop-preview{
     height: $heigth-index;
-
     .row{
-
         height: $heigth-index;
         .card-deck{
-            margin: 20px !important;
+            margin: 15px !important;
             .card{
+                background: $secondary;
                 margin-left:20px !important;
                 margin-right:20px !important;
+                .card-text{
+                    background: $secondary;
+                    color: $primary;
+                }
             }
-    }
-    
+        }
     }
 }
 
