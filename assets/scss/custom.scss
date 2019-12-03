@@ -91,9 +91,35 @@ nav{
                 background: $secondary;
                 margin-left:20px !important;
                 margin-right:20px !important;
-                .card-text{
-                    background: $secondary;
+                img{
+                    margin: auto !important;
+                    width: 90%; 
+                }
+                .card-body{
+                    text-align: center;  
+                }
+                h4{
                     color: $primary;
+                    margin: auto !important;
+                    padding: 15px !important;
+                    text-align: center;
+                }
+                .card-text{
+                    background: rgb(100, 100, 100);
+                    padding: 10px !important;
+                    margin: 15px !important;
+                    color: $primary;
+                }
+                #group-card{
+                    p{
+                        margin-top: 0px !important;
+                        width: 50%;
+                    }
+                    a{
+                        margin-top: 0px !important;
+                        width: 50%;
+                    }
+                    
                 }
             }
         }
@@ -104,11 +130,49 @@ nav{
     height: 45vh;
     .row{
         height: 45vh;
+        p{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom:15px !important;
+        }
+        #sign-up-label{
+            padding-left:15px !important;
+            padding-right: 15px !important;
+            background: $primary;
+        }
     }
 }
 
 footer{
     height: 40vh;
+    color: $primary;
     background: $secondary;
+    .row{
+        height: 100%;
+
+        div{
+            h3{
+                margin:25px 15px 15px 15px !important;
+            }
+            li{
+                margin:10px !important;
+            } 
+        }
+        #list-footer{
+            list-style: none;
+        }
+        #social-media{
+            list-style: none;
+        }
+        #payment{
+            list-style: none;
+            height: 100%;
+            img{
+                width: 10%;
+            }
+        }
+
+    }
+   
 }
 

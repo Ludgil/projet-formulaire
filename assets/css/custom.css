@@ -82,9 +82,37 @@ nav a img {
   margin-right: 20px !important;
 }
 
-#shop-preview .row .card-deck .card .card-text {
-  background: #303030;
+#shop-preview .row .card-deck .card img {
+  margin: auto !important;
+  width: 90%;
+}
+
+#shop-preview .row .card-deck .card .card-body {
+  text-align: center;
+}
+
+#shop-preview .row .card-deck .card h4 {
   color: #15c5bd;
+  margin: auto !important;
+  padding: 15px !important;
+  text-align: center;
+}
+
+#shop-preview .row .card-deck .card .card-text {
+  background: #646464;
+  padding: 10px !important;
+  margin: 15px !important;
+  color: #15c5bd;
+}
+
+#shop-preview .row .card-deck .card #group-card p {
+  margin-top: 0px !important;
+  width: 50%;
+}
+
+#shop-preview .row .card-deck .card #group-card a {
+  margin-top: 0px !important;
+  width: 50%;
 }
 
 #sign-up {
@@ -95,8 +123,50 @@ nav a img {
   height: 45vh;
 }
 
+#sign-up .row p {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 15px !important;
+}
+
+#sign-up .row #sign-up-label {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  background: #15c5bd;
+}
+
 footer {
   height: 40vh;
+  color: #15c5bd;
   background: #303030;
+}
+
+footer .row {
+  height: 100%;
+}
+
+footer .row div h3 {
+  margin: 25px 15px 15px 15px !important;
+}
+
+footer .row div li {
+  margin: 10px !important;
+}
+
+footer .row #list-footer {
+  list-style: none;
+}
+
+footer .row #social-media {
+  list-style: none;
+}
+
+footer .row #payment {
+  list-style: none;
+  height: 100%;
+}
+
+footer .row #payment img {
+  width: 10%;
 }
 /*# sourceMappingURL=custom.css.map */
