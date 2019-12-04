@@ -3,16 +3,16 @@
 
     if (isset($_POST)){
 
-        $options = array(
+        $sanitize = array(
             'usFirstname' => FILTER_SANITIZE_STRING,
             'usLastname' 	=> FILTER_SANITIZE_STRING,
             'usCountry' => FILTER_SANITIZE_STRING,
             'usGender' => FILTER_SANITIZE_STRING,
-            'usMail' 	=> FILTER_VALIDATE_EMAIL,
+            'usMail' 	=> FILTER_SANITIZE_EMAIL,
             'userSubject' 	=> FILTER_SANITIZE_STRING,
             'userMessage' 	=> FILTER_SANITIZE_STRING);
     
-        $result = filter_input_array(INPUT_POST, $options); 
+        $result = filter_input_array(INPUT_POST, $sanitize); 
 
     
         if ($result != null AND $result != FALSE) {
@@ -24,12 +24,13 @@
             echo "Un champ est vide ou n'est pas correct!";
     
         }
-    
-        foreach($options as $key => $value) 
-        {
-        echo $result[$key]=trim($result[$key]) . "</br>";
-        }
-    
+
+
+        $result['usMail']=filter_var($_POST['usMail'], FILTER_VALIDATE_EMAIL);
+
+        echo $result['usMail'];
+        
+
 
         
     }else{
