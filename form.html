@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Contact</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,6 +31,7 @@
                             </div>
                             <div class="col-12">
                                 <input type="text" name="usFirstname" id="idFirstname" required>
+                                <p id="errorFirstname" class="good">Only letters are allowed</p>
                             </div>
                         </div>
                     </div>
@@ -41,6 +42,7 @@
                             </div>
                             <div class="col-12">
                                 <input type="text" name="usLastname" id="idLastname" required>
+                                <p id="errorLastname" class="good">Only letters are allowed</p>
                             </div>
                         </div>
                     </div>
@@ -50,7 +52,8 @@
                                 <label>Mail</label>
                             </div>
                             <div class="col-12">
-                                <input type="mail" name="usMail" id="idMail" required>
+                                <input type="mail" name="usMail" id="idMail" placeholder="example@domain.com" required>
+                                <p id="errorMail" class="good">Your input isn't a mail</p>
                             </div>
                         </div>
                     </div>
@@ -73,6 +76,7 @@
                             <option value="Sweden">Sweden</option>
                             <option value="Switzerland">Switzerland</option>
                         </select>
+                        <p id="error" class="good">You had to select one country</p>
                     </div>
                     <div class="col-5">
                             <select id="idGender" name="usGender">
@@ -80,6 +84,7 @@
                                 <option value="man">Man</option>
                                 <option value="woman">Woman</option>
                             </select>
+                            <p id="error" class="good">You had to select your gender</p>
                         </div>
                 </div>
                 <div class="row mt-5">
@@ -93,6 +98,7 @@
                             <option value="2">Commercial Support</option>
                             <option value="3">Other Subject</option>
                         </select>
+                        <p id="error" class="good">You had to choose a subject</p>
                     </div>
                     <div class="col-12">
                         <input type="text" class="w-75 mt-1" name="userSubject" id="formMesSubjectElse" value="Enter your subject here">

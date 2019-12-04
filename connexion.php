@@ -1,15 +1,13 @@
 <?php
 
-$array = $_POST;
-
-$options = $array(
+$options = array(
     'userFirstname' => FILTER_SANITIZE_STRING,
     'userLastname' 	=> FILTER_SANITIZE_STRING,
     'userCountry' => FILTER_SANITIZE_STRING,
     'userGender' => FILTER_SANITIZE_STRING,
     'userMail' 	=> FILTER_VALIDATE_EMAIL,
-    'userSubject' 		=> FILTER_SANITIZE_STRING,
-    'userMessage' 		=> FILTER_SANITIZE_STRING);
+    'userSubject' 	=> FILTER_SANITIZE_STRING,
+    'userMessage' 	=> FILTER_SANITIZE_STRING);
 
 $result = filter_input_array(INPUT_POST, $options); 
 
@@ -25,8 +23,7 @@ if ($result != null AND $result != FALSE) {
 
 foreach($options as $key => $value) 
 {
-   $result[$key]=trim($result[$key]);
+   echo $result[$key]=trim($result[$key]);
 }
-
 
 ?>

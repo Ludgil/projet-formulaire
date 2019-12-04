@@ -107,3 +107,15 @@ input[type="file"] {
         width: 100% !important;
     }
 }
+
+
+
+.error{
+    margin-top:3px !important;
+    color: $secondary;
+    border: 1px solid red;
+}
+
+.good{
+    display: none;
+}

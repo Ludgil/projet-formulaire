@@ -1,0 +1,24 @@
+.form-inline {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar-nav li {
+  text-align: center;
+}
+
+.separator {
+  display: none;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0.4) !important;
+  color: #fff;
+  text-align: center;
+  font-family: bellotabold;
+  margin: 2vw 2vh;
+}
+/*# sourceMappingURL=smallscreen.css.map */

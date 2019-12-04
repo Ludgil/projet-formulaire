@@ -6,6 +6,69 @@ document.getElementById("formMessSubject").addEventListener("change", () => {
     }
 })
 
+// Verification FirstName
+
+ document.getElementById("idFirstname").addEventListener("input", ()=>{
+
+        let firstName = document.getElementById("idFirstname").value;
+        let onlyLetter = /^[A-Za-z-]+$/;
+        let checkLetter = onlyLetter.test(firstName);
+        let goodOrNot =document.getElementById("errorFirstname");
+
+        if(checkLetter) {
+        
+            goodOrNot.className="good";
+        }else{
+         
+            goodOrNot.className="error";
+        }
+
+ });
+
+
+ // Verification LastName
+
+ document.getElementById("idLastname").addEventListener("input", ()=>{
+
+    let lastName = document.getElementById("idLastname").value;
+    let onlyLetter = /^[A-Za-z-]+$/;
+    let checkLetter = onlyLetter.test(lastName);
+    let goodOrNot =document.getElementById("errorLastname");
+
+    if(checkLetter) {
+    
+        goodOrNot.className="good";
+    }else{
+     
+        goodOrNot.className="error";
+    }
+
+});
+
+
+document.getElementById("idMail").addEventListener("input", ()=>{
+    let usMail=document.getElementById("idMail");
+    let patternMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let mailOk = patternMail.test(usMail);
+    let goodOrNot =document.getElementById("errorMail");
+    console.log(mailOk);
+    if (mailOk === true) {
+        goodOrNot.className="good";
+        console.log(mailOk);
+    } else {
+        goodOrNot.className="error";
+        console.log(mailOk);
+    }
+
+});
+
+        
+
+
+ 
+ 
+
+
 /* vérification formulaire */
 $(document).ready(function() {
     let usFirstname = "";
@@ -23,6 +86,7 @@ $(document).ready(function() {
     $('#idFirstname').on('input', function() {
         usFirstname = $("#idFirstname").val().replace(/^\s+|\s+$/g, "");
     });
+
     // We catch the variable lastname 
     $('#idLastname').on('input', function() {
         usLastname = $("#idLastname").val().replace(/^\s+|\s+$/g, "");;

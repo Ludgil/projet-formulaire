@@ -113,4 +113,14 @@ input[type="file"] {
     width: 100% !important;
   }
 }
-/*# sourceMappingURL=lab.css.map */
+
+.error {
+  margin-top: 3px !important;
+  color: #303030;
+  border: 1px solid red;
+}
+
+.good {
+  display: none;
+}
+/*# sourceMappingURL=form.css.map */
