@@ -45,27 +45,62 @@ document.getElementById("formMessSubject").addEventListener("change", () => {
 
 });
 
-
+// verification email 
 document.getElementById("idMail").addEventListener("input", ()=>{
-    let usMail=document.getElementById("idMail");
+    let usMail=document.getElementById("idMail").value;
     let patternMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let mailOk = patternMail.test(usMail);
     let goodOrNot =document.getElementById("errorMail");
-    console.log(mailOk);
+    
     if (mailOk === true) {
         goodOrNot.className="good";
-        console.log(mailOk);
+       
     } else {
         goodOrNot.className="error";
-        console.log(mailOk);
+        
     }
 
 });
 
-        
+// verification Country 
 
+document.getElementById("idCountry").addEventListener("change",()=>{
 
- 
+     valueCountry=document.getElementById("idCountry").value;
+     let goodOrNot =document.getElementById("errorCountry");
+     if(valueCountry==0){
+        goodOrNot.className="error";
+     } else{
+        goodOrNot.className="good";
+     }
+});
+
+//verification Gender
+
+document.getElementById("idGender").addEventListener("change",()=>{
+
+    valueGender=document.getElementById("idGender").value;
+    let goodOrNot =document.getElementById("errorGender");
+    if(valueGender==0){
+       goodOrNot.className="error";
+    } else{
+       goodOrNot.className="good";
+    }
+});
+
+//verification subject
+
+document.getElementById("formMessSubject").addEventListener("change",()=>{
+
+    valueSubject=document.getElementById("formMessSubject").value;
+    let goodOrNot =document.getElementById("errorSubject");
+    if(valueSubject==0){
+       goodOrNot.className="error";
+    } else{
+       goodOrNot.className="good";
+    }
+});
+
  
 
 
@@ -99,8 +134,10 @@ $(document).ready(function() {
         let mailOk = patternMail.test(usMail);
         if (mailOk === false) {
             $('#idMail').css('border', '1px solid red');
+            console.log(mailOk);
         } else {
             $('#idMail').css('border', '1px solid green');
+            console.log(mailOk);
         }
     });
     // we catch the title
