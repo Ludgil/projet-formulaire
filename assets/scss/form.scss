@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-* {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 
 /* color */
 
@@ -19,8 +14,9 @@ body {
     h2,
     h3 {
         font-weight: 300;
+        text-align: center;
     }
-    form {
+    .formulare {
         margin-top: 2vh;
         margin-left: auto;
         text-align: center;
@@ -36,9 +32,6 @@ body {
     .btn {
         padding: 1vw !important;
     }
-    input[type="file"] {
-        opacity: 0;
-    }
 }
 
 input,
@@ -53,15 +46,15 @@ textarea {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    color: $dark !important;
 }
 
 input:focus {
-    background: rgba(131, 131, 131, 0.2);
+    color: $dark !important;
 }
 
 select,
 option {
-    margin-left: 1rem;
     margin-top: 1rem;
     width: 75%;
     text-align: center;
@@ -89,8 +82,10 @@ textarea {
 input[type="file"] {
     position: absolute;
     left: 0;
+    top: 20px;
     width: 150px;
-    height: 30px;
+    height: 50px;
+    opacity: 0;
 }
 
 .btn-primary {
@@ -100,6 +95,15 @@ input[type="file"] {
 
 .btn-success:hover {
     color: $dark !important;
+}
+
+.good {
+    opacity: 0;
+}
+
+#formulare {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width:320px) {

@@ -47,6 +47,13 @@ body {
     line-height: 1.3rem;
     .navbar {
         height: 15vh !important;
+        .separator {
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0 2vw;
+        }
+        ul {
+            align-items: center;
+        }
     }
     .bg-dark {
         background-color: $dark !important;
@@ -250,4 +257,9 @@ body {
     .card-deck {
         margin: 0 2.5vw;
     }
+}
+
+#formulare {
+    margin: 15vh 0;
+    background: $primary;
 }

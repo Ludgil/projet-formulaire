@@ -44,6 +44,17 @@ body .navbar {
   height: 15vh !important;
 }
 
+body .navbar .separator {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 2vw;
+}
+
+body .navbar ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body .bg-dark {
   background-color: #252525 !important;
 }
@@ -275,5 +286,10 @@ body .navbar-brand {
 
 #catalog .card-deck {
   margin: 0 2.5vw;
+}
+
+#formulare {
+  margin: 15vh 0;
+  background: #15c5bd;
 }
 /*# sourceMappingURL=custom.css.map */
