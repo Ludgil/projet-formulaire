@@ -272,4 +272,8 @@ body .navbar-brand {
   margin: 15vh 0;
   background: #15c5bd;
 }
+
+#catalog .card-deck {
+  margin: 0 2.5vw;
+}
 /*# sourceMappingURL=custom.css.map */

@@ -247,4 +247,7 @@ body {
 #catalog {
     margin: 15vh 0;
     background: $primary;
+    .card-deck {
+        margin: 0 2.5vw;
+    }
 }
