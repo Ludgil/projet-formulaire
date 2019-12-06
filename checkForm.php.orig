@@ -1,0 +1,18 @@
+<?php
+    session_start();
+    $_SESSION['sessionName']="sendForm";
+    $error = 7;
+    $datas = array(
+        'usFirstname' 	=> FILTER_SANITIZE_STRING,
+        'usLastname' 	=> FILTER_SANITIZE_STRING,
+        'usMail' 		=> FILTER_SANITIZE_EMAIL,
+        'usCountry' 	=> FILTER_SANITIZE_STRING,
+        'usGender' 		=> FILTER_SANITIZE_STRING,
+        'userSubject' 	=> FILTER_SANITIZE_STRING,
+        'userElseSubject' 	=> FILTER_SANITIZE_STRING,
+        'userMessage' 		=> FILTER_SANITIZE_STRING);
+
+
+   
+        
+?>

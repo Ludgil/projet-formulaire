@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+/* color */
+
+$primary: #15c5bd;
+$secondary: #303030;
+$dark: #252525;
+body {
+    width: 100%;
+    margin: 0;
+    font-family: "roboto";
+    color: #303030;
+    h1,
+    h2,
+    h3 {
+        font-weight: 300;
+        text-align: center;
+    }
+    .formulare {
+        margin-top: 2vh;
+        margin-left: auto;
+        text-align: center;
+        margin: auto;
+        width: 70vw;
+        header {
+            padding: 1vh 3vw !important;
+        }
+    }
+    .btn-file {
+        min-height: 10vh;
+    }
+    .btn {
+        padding: 1vw !important;
+    }
+}
+
+input,
+select,
+option,
+textarea {
+    text-align: center;
+    height: 3rem;
+    border: 1px solid rgba(48, 48, 48, 0.3);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: $dark !important;
+}
+
+input:focus {
+    color: $dark !important;
+}
+
+select,
+option {
+    margin-top: 1rem;
+    width: 75%;
+    text-align: center;
+}
+
+textarea {
+    width: 75%;
+    height: 30vh;
+    text-align: left;
+    ;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formMesSubjectElse {
+    display: none;
+    text-align: left;
+    color: #b9b9b9;
+}
+
+input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 150px;
+    height: 50px;
+    opacity: 0;
+}
+
+.btn-primary {
+    background: $primary;
+    border: 0;
+}
+
+.btn-success:hover {
+    color: $dark !important;
+}
+
+.good {
+    opacity: 0;
+}
+
+#formulare {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:320px) {
+    form {
+        width: 100% !important;
+    }
+}
