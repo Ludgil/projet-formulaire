@@ -92,7 +92,7 @@ $genderArray = array('Choose Your Gender', 'Male', 'Female');
                         <p>Gender</p>
                         <select id="idGender" name="usGender">
                                     <?php
-                                    foreach ($genderArray as $key => $value) {
+                                    foreach ($genderArray   as $key => $value) {
                                         $options="<option value='$value'";
                                         if($_SESSION['userGender']==$value){                                        
                                             $options.=" selected";
