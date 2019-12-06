@@ -1,3 +1,10 @@
+$(document).ready(function() {
+    if (document.getElementById('formMessSubject').value !== '3') {
+        document.getElementById("formMesSubjectElse").style.display = "none";
+    } else {
+        document.getElementById("formMesSubjectElse").style.display = "block";
+    }
+});
 document.getElementById("formMessSubject").addEventListener("change", () => {
     if (document.getElementById("formMessSubject").value == "3") {
         document.getElementById("formMesSubjectElse").style.display = "inline";

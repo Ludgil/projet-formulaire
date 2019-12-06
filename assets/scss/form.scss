@@ -7,16 +7,44 @@ $secondary: #303030;
 $dark: #252525;
 body {
     background-color: $primary;
-    margin-top: 25vh;
+    margin-top: 20vh;
     width: 100%;
 }
 
 #formulare {
-    width: 80%;
+    width: 55%;
     margin: auto;
-    background: red;
+    padding-bottom: 15vh;
+    header {
+        background: rgba(216, 211, 211, 0.7);
+        padding: 3vh 3vh;
+        margin-bottom: 5vh;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
     select {
         margin: 0;
         padding: 0;
+    }
+    input,
+    select,
+    option,
+    textarea {
+        height: 3rem;
+        border: 1px solid rgba(48, 48, 48, 0.3);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: $dark !important;
+        font-family: roboto;
+    }
+    textarea {
+        width: 75%;
+        height: 30vh;
     }
 }

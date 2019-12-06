@@ -2,18 +2,49 @@
 /* color */
 body {
   background-color: #15c5bd;
-  margin-top: 25vh;
+  margin-top: 20vh;
   width: 100%;
 }
 
 #formulare {
-  width: 80%;
+  width: 55%;
   margin: auto;
-  background: red;
+  padding-bottom: 15vh;
+}
+
+#formulare header {
+  background: rgba(216, 211, 211, 0.7);
+  padding: 3vh 3vh;
+  margin-bottom: 5vh;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 #formulare select {
   margin: 0;
   padding: 0;
+}
+
+#formulare input,
+#formulare select,
+#formulare option,
+#formulare textarea {
+  height: 3rem;
+  border: 1px solid rgba(48, 48, 48, 0.3);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #252525 !important;
+  font-family: roboto;
+}
+
+#formulare textarea {
+  width: 75%;
+  height: 30vh;
 }
 /*# sourceMappingURL=form.css.map */
