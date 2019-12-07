@@ -21,6 +21,17 @@
 }
 
 /* color */
+.btn-primary {
+  background: #252525;
+  color: #15c5bd;
+  margin: 2vh 0;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background: #303030;
+}
+
 /* The page */
 body {
   overflow-x: hidden;
@@ -31,6 +42,17 @@ body {
 
 body .navbar {
   height: 15vh !important;
+}
+
+body .navbar .separator {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 2vw;
+}
+
+body .navbar ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body .bg-dark {
@@ -45,16 +67,17 @@ body .navbar-brand {
 #homeJumbo {
   margin-top: 14vh;
   height: 90vh;
-  background-image: url("../img/back.png");
+  background-image: url("../img/background.jpg");
+  background-attachment: fixed;
   background-size: cover;
 }
 
 #homeJumbo .jumbotron {
-  float: right;
-  margin-top: 10vh;
+  margin: auto;
+  margin-top: 20vh;
   width: 50vw;
   text-align: center;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -63,17 +86,19 @@ body .navbar-brand {
 }
 
 #bestSeller {
-  margin-top: -25vh;
+  margin-top: -15vh;
 }
 
-#bestSeller .openSvg {
-  max-height: 25vh;
-  width: 100%;
+#bestSeller .titre {
+  margin-top: -55px;
 }
 
-#bestSeller .openSvg polygon {
-  fill: #fff;
-  height: 20vh;
+#bestSeller .background {
+  height: 25vh;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='100,10 100,0 -50,10' opacity='1' fill='rgba(255,255,255,1)'></polygon></svg>") no-repeat;
+  background-size: 100%;
+  color: #fff;
+  font-family: Roboto;
 }
 
 .card-deck {
@@ -93,6 +118,24 @@ body .navbar-brand {
      object-fit: cover;
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
+  transition: 0.5s;
+  transform: all;
+  -webkit-transform: all;
+  -moz-transform: all;
+  -ms-transform: all;
+  -o-transform: all;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.card-deck .card-img-top:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 
 .card-deck .card-content {
@@ -126,6 +169,11 @@ body .navbar-brand {
   border: 0;
 }
 
+.card-deck .btn-detail:hover {
+  background-color: #15c5bd;
+  color: #252525;
+}
+
 .card-deck .btn-price {
   float: left;
   display: block;
@@ -142,14 +190,9 @@ body .navbar-brand {
           box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.closeSvg polygon {
-  max-height: 25vh;
-  width: 100%;
-  fill: #303030;
-}
-
 #sectionDossier {
   background-color: #15c5bd;
+  padding-bottom: 5vh;
 }
 
 #sectionDossier .background {
@@ -172,6 +215,11 @@ body .navbar-brand {
   background: transparent;
   text-align: center;
   margin-top: 0;
+  padding: 0;
+}
+
+#sectionDossier .jumbotron button {
+  margin: 2vh 0 !important;
 }
 
 #footer {
@@ -189,5 +237,55 @@ body .navbar-brand {
 #footer .maine {
   background: #303030;
   color: #15c5bd;
+  margin-top: -15vh;
+}
+
+#footer .maine .footerAnchor {
+  font-family: roboto;
+  color: #9a9a9a;
+}
+
+#footer .maine .footerAnchor:after {
+  content: "-";
+  padding: 0 1vw;
+}
+
+#footer .address {
+  font-family: roboto;
+  font-size: 1rem;
+  color: #9b9a9a;
+}
+
+#footer .bankImage {
+  width: 10%;
+}
+
+#footer input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid #15c5bd;
+  height: 6vh !important;
+  padding: 1vw;
+  background: #252525;
+  color: #fff;
+  text-align: center;
+}
+
+#footer button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 6vh;
+  width: 12vw;
+  background: #15c5bd;
+  border: 0;
+}
+
+#catalog {
+  margin: 15vh 0;
+  background: #15c5bd;
+}
+
+#catalog .card-deck {
+  margin: 0 2.5vw;
 }
 /*# sourceMappingURL=custom.css.map */

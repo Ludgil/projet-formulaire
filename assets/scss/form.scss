@@ -1,9 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-* {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 
 /* color */
 
@@ -11,111 +6,58 @@ $primary: #15c5bd;
 $secondary: #303030;
 $dark: #252525;
 body {
+    background-color: $primary;
+    margin-top: 20vh;
     width: 100%;
-    margin: 0;
-    font-family: "roboto";
-    color: #303030;
-    h1,
-    h2,
-    h3 {
-        font-weight: 300;
+}
+
+#formulare {
+    width: 55%;
+    margin: auto;
+    padding-bottom: 15vh;
+    header {
+        background: rgba(216, 211, 211, 0.7);
+        padding: 3vh 3vh;
+        margin-bottom: 5vh;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
     }
-    form {
-        margin-top: 2vh;
-        margin-left: auto;
-        text-align: center;
-        margin: auto;
-        width: 70vw;
-        header {
-            padding: 1vh 3vw !important;
-        }
+    select {
+        margin: 0;
+        padding: 0;
     }
-    .btn-file {
-        min-height: 10vh;
+    select,
+    option,
+    input{
+        height: 3rem;
+        border: 1px solid rgba(48, 48, 48, 0.3);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-family: roboto;
+        color: $dark !important;
     }
-    .btn {
-        padding: 1vw !important;
-    }
-    input[type="file"] {
-        opacity: 0;
-    }
-}
-
-input,
-select,
-option,
-textarea {
-    text-align: center;
-    height: 3rem;
-    border: 1px solid rgba(48, 48, 48, 0.3);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-input:focus {
-    background: rgba(131, 131, 131, 0.2);
-}
-
-select,
-option {
-    margin-left: 1rem;
-    margin-top: 1rem;
-    width: 75%;
-    text-align: center;
-}
-
-textarea {
-    width: 75%;
-    height: 30vh;
-    text-align: left;
-    ;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#formMesSubjectElse {
-    display: none;
-    text-align: left;
-    color: #b9b9b9;
-}
-
-input[type="file"] {
-    position: absolute;
-    left: 0;
-    width: 150px;
-    height: 30px;
-}
-
-.btn-primary {
-    background: $primary;
-    border: 0;
-}
-
-.btn-success:hover {
-    color: $dark !important;
-}
-
-@media screen and (max-width:320px) {
-    form {
-        width: 100% !important;
+    
+    textarea {
+        height: 30vh;
+        border: 1px solid rgba(48, 48, 48, 0.3);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: $dark !important;
+        font-family: roboto;
+        
     }
 }
 
 
-
-.error{
-    margin-top:3px !important;
-    color: $secondary;
-    border: 1px solid red;
-}
-
-.good{
-    display: none;
+#croix{
+    width: 30px;
 }
