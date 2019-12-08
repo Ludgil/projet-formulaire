@@ -88,7 +88,7 @@ if ($result['userSubject']==='3'){
     checkInput($result['userElseSubject'], 80,'userElseSubject',$pattern01);
     $_SESSION['userSubject']=3;
 }else {
-    
+
     checkSelect($result['userSubject'], 50, 'userSubject',$pattern01,"choose a Subject");
 
 }
@@ -99,9 +99,34 @@ checkInput($result['userMessage'], 2000, 'userMessage',"*");
 //$_SESSION['userMail']=$result['usMail'];
 //echo $_SESSION['error'];
     if($_SESSION['error']==0){
-        echo "send mail";
-    }else {
-        echo $_SESSION['error'];
+        
+        //we send a mail
+        $to      = 'emile.markus@gmail.com';
+        if ($result['userSubject']==='3'){$subject =$result['userElseSubject'];}else{$subject=$result['userSubject'];} 
+        $message = "Message send it by:".$_SESSION['userMail']."\r\n";
+        $message.= "Firstname :".$_SESSION['userFirstname']."\r\n";
+        $message.= "Lastname :".$_SESSION['userLastname']."\r\n";
+        $message.= "Mail :".$_SESSION['userMail']."\r\n";
+        $message.= "Country :".$_SESSION['userCountry']."\r\n";
+        $message.= "Gender :".$_SESSION['userGender']."\r\n";
+        $message.= "userSubject :".$_SESSION['userSubject']."\r\n";
+        $message.= "Subject :".$_SESSION['userElseSubject']."\r\n";
+        $message.= "Message :".$_SESSION['userMessage']."\r\n";
+        echo $message;
+        $headers = $_SESSION['userMail'] . "\r\n" .
+        'Reply-To: '.$_SESSION['userMail']."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+        if(@mail($to, $subject, $message, $headers)){
+            $_SESSION['sendit']=true;
+            header('Location: form.php');
+        }else{
+            $_SESSION['sendit']=false;
+           header('Location: form.php');
+        }       
+
+    }else{
+        $_SESSION['error']=1;
+        header('Location: form.php');
     }
 
-header('Location: form.php');
+
