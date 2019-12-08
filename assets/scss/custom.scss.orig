@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@font-face {
+    font-family: 'bellotabold';
+    src: url("fonts/Bellota-Bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bellotalight';
+    src: url('fonts/Bellota-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bellotaregular';
+    src: url('fonts/Bellota-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* color */
+
+$primary: #15c5bd;
+$secondary: #303030;
+$dark: #252525;
+.btn-primary {
+    background: $dark;
+    color: $primary;
+    margin: 2vh 0;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: $secondary;
+}
+
+
+/* The page */
+
+body {
+    overflow-x: hidden;
+    font-family: "bellotaregular";
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    .navbar {
+        height: 15vh !important;
+        .separator {
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0 2vw;
+        }
+        ul {
+            align-items: center;
+        }
+    }
+    .bg-dark {
+        background-color: $dark !important;
+    }
+    .navbar-brand {
+        padding-right: 3vw;
+        border-right: 2px solid $primary;
+    }
+}
+
+#homeJumbo {
+    margin-top: 14vh;
+    height: 90vh;
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    .jumbotron {
+        margin: auto;
+        margin-top: 20vh;
+        width: 50vw;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+#bestSeller {
+    margin-top: -15vh;
+    .titre {
+        margin-top: -55px;
+    }
+    .background {
+        height: 25vh;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='100,10 100,0 -50,10' opacity='1' fill='rgba(255,255,255,1)'></polygon></svg>") no-repeat;
+        background-size: 100%;
+        color: #fff;
+        font-family: Roboto;
+    }
+}
+
+.card-deck {
+    padding: 2vh 1vw;
+    .card {
+        text-align: center;
+        margin: 3vh 1vw 1vh 1vw;
+        background: $secondary;
+        color: $primary;
+    }
+    .card-img-top {
+        height: 200px !important;
+        object-fit: cover;
+        transition: all .25s ease;
+        transition: 0.5s;
+        transform: all;
+        -webkit-transform: all;
+        -moz-transform: all;
+        -ms-transform: all;
+        -o-transform: all;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .card-img-top:hover {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+    }
+    .card-content {
+        padding: 15px;
+        text-align: left;
+    }
+    .card-title {
+        margin-top: 0px;
+        font-weight: 700;
+        font-size: 1.65em;
+    }
+    .card-title a {
+        color: #000;
+        text-decoration: none !important;
+    }
+    .card-text {
+        margin-top: 1vh;
+        padding: 1vh;
+        background: $dark;
+        height: 15vh;
+        overflow: hidden;
+    }
+    .btn-price,
+    .btn-detail {
+        background-color: $dark;
+        color: $primary;
+        border: 0;
+    }
+    .btn-detail:hover {
+        background-color: $primary;
+        color: $dark;
+    }
+    .btn-price {
+        float: left;
+        display: block;
+        width: 45%;
+    }
+    .btn-detail {
+        float: right;
+        width: 45%
+    }
+}
+
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#sectionDossier {
+    background-color: $primary;
+    padding-bottom: 5vh;
+    .background {
+        height: 25vh;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='100,10 100,0 -50,0' opacity='1' fill='rgba(48,48,48,1)'></polygon></svg>") no-repeat;
+        background-size: 100%;
+        color: #fff;
+        font-family: Roboto;
+    }
+    h4.titre {
+        padding-right: 3vw;
+        padding-top: 3vh;
+        float: right;
+        color: $primary;
+        font-size: 3rem !important;
+    }
+    .jumbotron {
+        background: transparent;
+        text-align: center;
+        margin-top: 0;
+        padding: 0;
+        button {
+            margin: 2vh 0 !important;
+        }
+    }
+}
+
+#footer {
+    background-color: $primary;
+    .wave {
+        margin-top: 0vh;
+        height: 50vh;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 500'><path fill='rgba(48,48,48,1)' fill-opacity='1' d='M0,160L34.3,144C68.6,128,137,96,206,117.3C274.3,139,343,213,411,208C480,203,549,117,617,112C685.7,107,754,181,823,181.3C891.4,181,960,107,1029,117.3C1097.1,128,1166,224,1234,234.7C1302.9,245,1371,171,1406,133.3L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z'></path></svg>") no-repeat;
+        background-size: 100%;
+        background-position: 0 -130px;
+    }
+    .maine {
+        background: rgba(48, 48, 48, 1);
+        color: $primary;
+        margin-top: -15vh;
+        .footerAnchor {
+            font-family: roboto;
+            color: #9a9a9a;
+        }
+        .footerAnchor:after {
+            content: "-";
+            padding: 0 1vw;
+        }
+    }
+    .address {
+        font-family: roboto;
+        font-size: 1rem;
+        color: #9b9a9a;
+    }
+    .bankImage {
+        width: 10%;
+    }
+    input {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 2px solid $primary;
+        height: 6vh !important;
+        padding: 1vw;
+        background: $dark;
+        color: #fff;
+        text-align: center;
+        ;
+    }
+    button {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 6vh;
+        width: 12vw;
+        background: $primary;
+        border: 0;
+    }
+}
+
+#catalog {
+    margin: 15vh 0;
+    background: $primary;
+    .card-deck {
+        margin: 0 2.5vw;
+    }
+}

@@ -54,14 +54,6 @@ body {
   font-family: roboto;
 }
 
-.good {
-  display: none;
-}
-
-.error {
-  display: block;
-}
-
 #croix {
   width: 30px;
 }

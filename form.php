@@ -16,7 +16,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!-- <link rel="stylesheet" media="screen and (max-width: 480px)" href="assets/css/smallscreen.css" type="text/css" />
-    <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width:780px)" href="assets/css/middlescreen.css" type="text/css" /> -->
+        <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width:780px)" href="assets/css/middlescreen.css" type="text/css" /> -->
         <link rel="stylesheet" href="assets/css/custom.css">
         <link rel="stylesheet" href="assets/css/form.css">
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="assets/css/smallscreen.css" type="text/css" />
@@ -61,12 +61,14 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
             <div class="row mb-2">
                 <div class="col-md-6 d-flex">
                     <input class="mr-3" type="text" name="usFirstname" id="idFirstname" required maxlength=30 aria-label="firstname" aria-describedby="user firstname" aria-required="true" value="<?php if(isset($_SESSION['userFirstname'])){echo $_SESSION['userFirstname'];}?>"></<input>
-                    <?php if(isset($_SESSION['userFirstnameError'])){
+                    <p id="errorFirstname" class="good">Only letters are allowed</p>
+                   <?php if(isset($_SESSION['userFirstnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userFirstnameError']."'"." alt='error'>";
                     }?>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
                     <input class="mr-3" type="text" name="usLastname" id="idLastname" required maxlength=30 aria-label="lastname" aria-describedby="user lastname" aria-required="true" value="<?php if(isset($_SESSION['userLastname'])){echo $_SESSION['userLastname'];}?>"></<input>
+                    <p id="errorLastname" class="good">Only letters are allowed</p>
                     <?php if(isset($_SESSION['userLastnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userLastnameError']."'"." alt='error'>";
                     }?>
@@ -81,6 +83,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
             <div class="row mb-2">
                 <div class="col-md-12 d-flex">
                     <input class="mr-3" type="text" name="usMail" id="idMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
+                    <p id="errorMail" class="good">Your input isn't a mail</p>
                     <?php if(isset($_SESSION['usMailError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['usMailError']."'"." alt='error'>";
                     }?>
@@ -114,6 +117,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                             }
                             ?>
                     </select>
+                    <p id="errorCountry" class="good">You had to select one country</p>
                     <?php if(isset($_SESSION['userCountryError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userCountryError']."'"." alt='error'>";
                     }?>
@@ -138,6 +142,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                                 }
                                 ?>
                     </select>
+                    <p id="errorGender" class="good">You had to select your gender</p>
                     <?php if(isset($_SESSION['userGenderError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userGenderError']."'"." alt='error'>";
                     }?>
@@ -172,6 +177,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                             }
                             ?>
                     </select>
+                    <p id="errorSubject" class="good">You had to choose a subject</p>
                     <?php if(isset($_SESSION['userSubjectError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userSubjectError']."'"." alt='error'>";
                         }
