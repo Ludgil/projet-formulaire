@@ -60,13 +60,13 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
             </div>
             <div class="row mb-2">
                 <div class="col-md-6 d-flex">
-                    <input class="mr-3" type="text" name="usFirstname" id="formUseFirstname" required maxlength=30 aria-label="firstname" aria-describedby="user firstname" aria-required="true" value="<?php if(isset($_SESSION['userFirstname'])){echo $_SESSION['userFirstname'];}?>"></<input>
+                    <input class="mr-3" type="text" name="usFirstname" id="idFirstname" required maxlength=30 aria-label="firstname" aria-describedby="user firstname" aria-required="true" value="<?php if(isset($_SESSION['userFirstname'])){echo $_SESSION['userFirstname'];}?>"></<input>
                     <?php if(isset($_SESSION['userFirstnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userFirstnameError']."'"." alt='error'>";
                     }?>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
-                    <input class="mr-3" type="text" name="usLastname" id="formUseLastname" required maxlength=30 aria-label="lastname" aria-describedby="user lastname" aria-required="true" value="<?php if(isset($_SESSION['userLastname'])){echo $_SESSION['userLastname'];}?>"></<input>
+                    <input class="mr-3" type="text" name="usLastname" id="idLastname" required maxlength=30 aria-label="lastname" aria-describedby="user lastname" aria-required="true" value="<?php if(isset($_SESSION['userLastname'])){echo $_SESSION['userLastname'];}?>"></<input>
                     <?php if(isset($_SESSION['userLastnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userLastnameError']."'"." alt='error'>";
                     }?>
@@ -80,7 +80,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
             </div>
             <div class="row mb-2">
                 <div class="col-md-12 d-flex">
-                    <input class="mr-3" type="text" name="usMail" id="formMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
+                    <input class="mr-3" type="text" name="usMail" id="idMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
                     <?php if(isset($_SESSION['usMailError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['usMailError']."'"." alt='error'>";
                     }?>
