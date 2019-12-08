@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width:780px)" href="assets/css/middlescreen.css" type="text/css" /> -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="assets/css/smallscreen.css" type="text/css" />
+
+</head>
+
+<body>
+    <!-- menu bootstrap  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        <a class="navbar-brand" href="#"> <img src="assets/img/logo.png" alt="" width="100px" height="100px"></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="separator d-none d-md-block">|</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="catalog.html">Catalog</a>
+                </li>
+                <li class="separator d-none d-md-block">|</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.php">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!--  jumbotron -->
+    <div class="container-fluid" id="homeJumbo">
+        <div class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-4">Hacker Poulette</h1>
+                        <h class="lead">
+                            <h2>Our mission is to put the power of computing and digital making into the hands of people all over the world.</h2>
+
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- best sellers  -->
+    <div class="container-fluid" id="bestSeller">
+        <div class="row">
+            <div class="col-12 background">
+
+            </div>
+        </div>
+        <div class="row titre">
+            <div class="col-lg-12">
+                <h3 class="float-right text-primary"><b>OUR 4 BEST SALES</b></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Card title</h5>
+                        <img src="assets/img/RASP_03_01.jpg" class="card-img-top" alt="... ">
+                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="#" class="btn btn-primary btn-price">25€</a><a href="#" class="btn btn-primary btn-detail">more details</a>
+                    </div>
+                </div>
+                <div class="card ">
+
+                    <div class="card-body ">
+                        <h5 class="card-title ">Card title</h5>
+                        <img src="assets/img/RASP_03_01.jpg" class="card-img-top " alt="... ">
+                        <p class="card-text ">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary btn-price">25€</a><a href="#" class="btn btn-primary btn-detail">more details</a>
+                    </div>
+                </div>
+                <div class="card ">
+
+                    <div class="card-body ">
+                        <h5 class="card-title ">Card title</h5>
+                        <img src="assets/img/RASP_03_01.jpg" class="card-img-top " alt="... ">
+                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <a href="#" class="btn btn-primary btn-price">25€</a><a href="#" class="btn btn-primary btn-detail">more details</a>
+                    </div>
+                </div>
+                <div class="card ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">Card title</h5>
+                        <img src="assets/img/RASP_PI_4_B_01_ANW.jpg" class="card-img-top " alt="... ">
+                        <p class="card-text ">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <a href="#" class="btn btn-primary btn-price">25€</a><a href="#" class="btn btn-primary btn-detail">more details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="sectionDossier">
+            <div class="background">
+                <h4 class="titre">NOTRE DOSSIER</h4>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="jumbotron">
+                            <h1 class="display-3">Comment overclocker la Raspberry Pi 3 (et la Raspberry Pi 2)</h1>
+                            <p class="lead">
+                                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Lire la suite</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam consequatur commodi voluptatem quam quos! Hic debitis unde commodi esse veniam, repellendus quam et corporis rem possimus voluptate, quasi ducimus atque maiores ab facere accusantium
+                        quos nemo soluta asperiores ad! Quo, animi velit est eum, veritatis perferendis harum vero, distinctio voluptas illo totam at quae cupiditate laborum assumenda illum saepe! Rem, ab quam! Officiis veniam optio quaerat dolore! Vel
+                        magnam accusamus, autem laborum ab debitis, nulla repellat ad, animi ipsa possimus totam! Excepturi hic aspernatur eligendi laudantium vitae consequatur necessitatibus nesciunt. Saepe eligendi ea corporis ut dolores, voluptatem
+                        error dolorum sit culpa architecto consequuntur iusto eos beatae, repellendus unde quisquam atque iste rem amet. Dolores alias quos laborum aliquam neque molestias voluptatum, ipsam dolore nobis aut blanditiis, culpa perferendis.
+                        Minus voluptate totam voluptates laboriosam repellat numquam quis quae, veniam temporibus unde error mollitia nam quia aliquam. Atque placeat fuga cum corporis hic, voluptatum nisi quos libero, reprehenderit enim nihil! Maxime
+                        quaerat velit omnis! Error sunt quos earum quibusdam sint minima enim, voluptates aut saepe laboriosam possimus, dicta sit facilis eveniet magnam omnis, ducimus molestias iure. Atque, accusantium. Nulla expedita aperiam reiciendis
+                        amet pariatur, nostrum minima ab repellat omnis, iste placeat atque.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer  -->
+    <div class="row" style="margin-top:-15vh">
+        <div class="col-lg-12" id="footer">
+            <div class="wave">
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="maine text-center">
+                        <h3>SUBSCRIPT TO OUR NEWSLETTER HERE</h3>
+                        <input type="text" class="newsletter" size=40 name="newMail" id="formNewmail" value="enter your mail here ">
+                        <button class="newsSubscipte">subscribe</button>
+                        <div class="mt-5 row justify-content-center align-content-center">
+                            <a href="#home" class="footerAnchor">Home</a>
+                            <a href="catalog.html" class="footerAnchor">Catalog</a>
+                            <a href="form.html" class="footerAnchor">Contact</a>
+                            <span>Suivez-nous sur</span>
+                            <object type="image/svg+xml" class="ml-2" data="https://image.flaticon.com/icons/svg/145/145802.svg" width="1.5%">
+                                            <!-- fallback here (<img> referencing a PNG version of the graphic, for example) -->
+                                    </object>
+                            <object type="image/svg+xml" class="ml-2" data="https://image.flaticon.com/icons/svg/145/145807.svg" width="1.5%">
+                                        <!-- fallback here (<img> referencing a PNG version of the graphic, for example) -->
+                                    </object>
+                            <object type="image/svg+xml" class="ml-2" data="https://image.flaticon.com/icons/svg/145/145812.svg" width="1.5%">
+                                        <!-- fallback here (<img> referencing a PNG version of the graphic, for example) -->
+                                    </object>
+                            <object type="image/svg+xml" class="ml-2" data="https://image.flaticon.com/icons/svg/355/355992.svg" width="1.5%">
+                                        <!-- fallback here (<img> referencing a PNG version of the graphic, for example) -->
+                                    </object>
+                        </div>
+                        <p class="address mt-3">
+                            Tous les prix sont en euros, TVA en vigueur comprise. - © Copyright 2019 - Hackers poulette | Charlerois 0826.855.031, 6041 Gosselies
+                        </p>
+                        <div class="col-lg-12 text-left">
+                            <img src="https://media.cdnws.com/_i/76280/645/3566/46/moyens-paiement.png" alt="" class="img-fluid bankImage">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.min.js "></script>
+    <script src="assets/js/popper.min.js "></script>
+    <script src="assets/js/bootstrap.min.js "></script>
+</body>
+
+</html>

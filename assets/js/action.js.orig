@@ -88,9 +88,12 @@ $(document).ready(function() {
         let onlyLetter = /^[A-Za-z-]+$/;
         let checkLetter = onlyLetter.test(firstName);
         let goodOrNot = document.getElementById("errorFirstname");
+
         if (checkLetter) {
+
             goodOrNot.className = "good";
         } else {
+
             goodOrNot.className = "error";
         }
 
