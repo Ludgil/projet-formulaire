@@ -10,7 +10,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
     <html lang="en">
 
     <head>
-        <title>Title</title>
+        <title>Contact</title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width   , initial-scale=1, shrink-to-fit=no">
@@ -55,35 +55,29 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </header>
             </div>
             <!--  première ligne  -->
-            <div class="row mb-2">
-                <div class="col-md-6"><label> Firstname</label></div>
-                <div class="col-md-6"><label> Lastname</label></div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-md-6 d-flex">
-                    <input class="mr-3" type="text" name="usFirstname" id="idFirstname" required maxlength=30 aria-label="firstname" aria-describedby="user firstname" aria-required="true" value="<?php if(isset($_SESSION['userFirstname'])){echo $_SESSION['userFirstname'];}?>"></<input>
+            <div class="form-row mb-2">
+                <div class="col-md-6 col-sm-12 d-flex flex-column">
+                    <label> Firstname</label>
+                    <input  type="text" name="usFirstname" id="idFirstname" required maxlength=30 aria-label="firstname" aria-describedby="user firstname" aria-required="true" value="<?php if(isset($_SESSION['userFirstname'])){echo $_SESSION['userFirstname'];}?>"></<input>
                     <p id="errorFirstname" class="good">Only letters are allowed</p>
                    <?php if(isset($_SESSION['userFirstnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userFirstnameError']."'"." alt='error'>";
                     }?>
                 </div>
-                <div class="col-md-6 d-flex align-items-center">
-                    <input class="mr-3" type="text" name="usLastname" id="idLastname" required maxlength=30 aria-label="lastname" aria-describedby="user lastname" aria-required="true" value="<?php if(isset($_SESSION['userLastname'])){echo $_SESSION['userLastname'];}?>"></<input>
+                <div class="col-md-6 col-sm-12 d-flex flex-column">
+                    <label> Lastname</label>
+                    <input  type="text" name="usLastname" id="idLastname" required maxlength=30 aria-label="lastname" aria-describedby="user lastname" aria-required="true" value="<?php if(isset($_SESSION['userLastname'])){echo $_SESSION['userLastname'];}?>"></<input>
                     <p id="errorLastname" class="good">Only letters are allowed</p>
                     <?php if(isset($_SESSION['userLastnameError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userLastnameError']."'"." alt='error'>";
                     }?>
                 </div>
             </div>
-            <!--  deuxième ligne  -->
-            <div class="row mb-2">
-                <div class="col-md-12">
+            <!--  deuxième ligne  -->   
+            <div class="form-row mb-2">
+                <div class="col-md-12 col-sm-12 d-flex flex-column">
                     <label>Mail</label>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-md-12 d-flex">
-                    <input class="mr-3" type="text" name="usMail" id="idMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
+                    <input  type="text" name="usMail" id="idMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
                     <p id="errorMail" class="good">Your input isn't a mail</p>
                     <?php if(isset($_SESSION['errorMail'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['errorMail']."'"." alt='error'>";
@@ -91,16 +85,11 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </div>
             </div>
             <!--  troisième ligne  -->
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <label>Country</label>
-                </div>
-                <div class="col-md-6">
-                    <label>Gender</label>
-                </div>
+            <div class="form-row mb-2">
                 <!-- country -->
-                <div class="col-md-6 d-flex">
-                    <select class="mr-3" id="idCountry" name="usCountry">
+                <div class="col-md-6 col-sm-12 d-flex flex-column">
+                    <label>Country</label>
+                    <select  id="idCountry" name="usCountry">
                             <?php
                             foreach ($countryArray as $key => $value) {
                                 if($key==0){
@@ -124,8 +113,9 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                     }?>
                 </div>
                 <!--  gender -->
-                <div class="col-md-6 d-flex">
-                    <select class="mr-3" id="idGender" name="usGender">
+                <div class="col-md-6 col-sm-12 d-flex flex-column">
+                    <label>Gender</label>
+                    <select  id="idGender" name="usGender">
                             <?php
                                 foreach ($genderArray as $key => $value) {
                                     if($key==0){
@@ -150,15 +140,11 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </div>
             </div>
             <!--  quatrième ligne  -->
-            <div class="row mb-2">
-                <div class="col-md-12">
-                    <label> Message Subject </label>
-                </div>
-            </div>
-            <div class="row mb-2">
+            <div class="form-row mb-2">
                 <!-- choose the subject -->
-                <div class="col-md-12 col-sm-12 d-flex">
-                    <select class="mr-3" name="userSubject" id="formMessSubject">
+                <div class="col-md-12 col-sm-12 d-flex flex-column">
+                    <label> Message Subject </label>
+                    <select name="userSubject" id="formMessSubject">
                             <?php
                             foreach ($subjectArray as $key => $value) {
                                 if($key==0){
@@ -189,7 +175,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </div>
             </div>
             <!-- cinquième ligne -->
-            <div class="row mb-2">
+            <div class="form-row mb-2">
                 <div class="col-md-12 col-sm-12">
                     <?php
                     if (isset($_SESSION['userSubject'])) {
@@ -205,13 +191,9 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </div>
             </div>
             <!-- 6ème ligne -->
-            <div class="row mb-2">
-                <div class="col-md-12">
+            <div class="form-row mb-2">
+                <div class="col-md-12 col-sm-12 d-flex flex-column">
                     <label>Votre message</label>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-md-12 d-flex flex-column">
                     <textarea name="userMessage" id="idformMessage" cols=60 rows=10 required><?php if(isset($_SESSION['userMessage'])){$texte=ltrim($_SESSION['userMessage']);echo $texte;}?></textarea>
                     <?php if(isset($_SESSION['userMessageError'])){
                         echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['userMessageError']."'"." alt='error'>";
@@ -219,8 +201,8 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 </div>
             </div>
             <!-- submit line -->
-            <div class="row pt-5 justify-content-start">
-                <div class="col-md-12">
+            <div class="form-row pt-5 justify-content-start">
+                <div class="col-md-12 col-sm-12">
                     <button id="btnSubmit" type="submit" class=" btn btn-success">Send Form</button>
                 </div>
             </div>
