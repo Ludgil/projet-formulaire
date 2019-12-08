@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['sessionName'] = "sendForm";
-$error                   = 7;
+$_SESSION['error']=0;
 $datas                   = array(
     'usFirstname'     => FILTER_SANITIZE_STRING,
     'usLastname'      => FILTER_SANITIZE_STRING,
@@ -41,8 +41,9 @@ function checkMail($mail){
     if (filter_var($mail,FILTER_VALIDATE_EMAIL)){
         $_SESSION['userMail']=$mail;
     }else {
-     
-        $_SESSION['errorMail']="Please insert a valid email";    
+        $_SESSION['errorMail']="Please insert a valid email"; 
+        $_SESSION['error']=1;
+        
     }
 };
 function checkInput($str,$maxLength,$valueName,$illegal) {
@@ -52,8 +53,10 @@ function checkInput($str,$maxLength,$valueName,$illegal) {
     } if(strpbrk($str, $illegal) ==true){ // check illegal caracter
         if(isset($_SESSION[$valueName."Error"])){
             $_SESSION[$valueName."Error"].= "Illegal caracter found";
+            $_SESSION['error']=2;
             }else {
                 $_SESSION[$valueName."Error"]= "Illegal caracter found";
+                $_SESSION['error']=3;
             }
        }else {
             $_SESSION[$valueName]=$str;               
@@ -63,11 +66,11 @@ function checkInput($str,$maxLength,$valueName,$illegal) {
 function checkSelect($str,$maxLength,$valueName,$illegal,$mess) {
     if($str!=='0'){
         checkInput(trim($str),$maxLength,$valueName,$illegal);
-    }        else{ $_SESSION[$valueName."Error"]= $mess.",please";}    
-}
-
-
-function checkTitle($str,$maxLength,$valueName,$illegal,$mess){
+    }        else{ 
+        $_SESSION[$valueName."Error"]= $mess.",please";
+        $_SESSION['error']=4;
+     
+    }    
 
 }
 
@@ -75,22 +78,30 @@ function checkTitle($str,$maxLength,$valueName,$illegal,$mess){
 
 
 // check variable
- $pattern01 = "#$%^&*()+=[]'!;,./\{}|:<>?~";
+ $pattern01 = "#$%^&*()+=[]'!;,./\{}|:<>?~0123456789";
 checkInput($result['usFirstname'], 20, 'userFirstname',$pattern01);
 checkInput($result['usLastname'], 20, 'userLastname',$pattern01);
 checkSelect($result['usCountry'], 60, 'userCountry',$pattern01,"Choose your Country");
 checkSelect($result['usGender'], 20, 'userGender',$pattern01,"Choose your Gender");
-echo $result['userSubject'];
+//echo $result['userSubject'];
 if ($result['userSubject']==='3'){
     checkInput($result['userElseSubject'], 80,'userElseSubject',$pattern01);
     $_SESSION['userSubject']=3;
 }else {
+    
     checkSelect($result['userSubject'], 50, 'userSubject',$pattern01,"choose a Subject");
+
 }
-echo $result['userMessage'];
+//echo $result['userMessage'];
 checkInput($result['userMessage'], 2000, 'userMessage',"*");
 //$result['usMail']=filter_var($_POST['usMail'], FILTER_VALIDATE_EMAIL);
  checkMail(($result['usMail']));
 //$_SESSION['userMail']=$result['usMail'];
+//echo $_SESSION['error'];
+    if($_SESSION['error']==0){
+        echo "send mail";
+    }else {
+        echo $_SESSION['error'];
+    }
 
 header('Location: form.php');

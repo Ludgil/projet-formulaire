@@ -1,5 +1,6 @@
 <?php
 session_start();
+//var_dump($_SESSION);
 if (isset($_SESSION['sessionName'])) {$flag = 0;}
 $countryArray = array('Choose Your Country', 'Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island', 'Brazil', 'British Indian Ocean Territory', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Christmas Island', 'Colombia', 'Comoros', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote D\'ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Guiana', 'French Polynesia', 'French Southern Territories', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guadeloupe', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea-bissau', 'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libyan Arab Jamahiriya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macao', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Martinique', 'Mauritania', 'Mauritius', 'Mayotte', 'Mexico', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Niue', 'Norfolk Island', 'Northern Mariana Islands', 'Norway', 'Oman', 'Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Pitcairn', 'Poland', 'Portugal', 'Puerto Rico', 'Qatar', 'Reunion', 'Romania', 'Russian Federation', 'Rwanda', 'Saint Helena', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Pierre and Miquelon', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Svalbard and Jan Mayen', 'Swaziland', 'Sweden', 'Switzerland', 'Syrian Arab Republic', 'Tajikistan', 'Thailand', 'Togo', 'Tokelau', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Turks and Caicos Islands', 'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Viet Nam', 'Wallis and Futuna', 'Western Sahara', 'Yemen', 'Zambia', 'Zimbabwe');
 $genderArray  = array('Choose Your Gender', 'Male', 'Female');
@@ -84,8 +85,8 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 <div class="col-md-12 d-flex">
                     <input class="mr-3" type="text" name="usMail" id="idMail" required maxlength=80 size=40 aria-label="mail" aria-describedby="user mail address" aria-required="true" value="<?php if(isset($_SESSION['userMail'])){echo $_SESSION['userMail'];}?>"></<input>
                     <p id="errorMail" class="good">Your input isn't a mail</p>
-                    <?php if(isset($_SESSION['usMailError'])){
-                        echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['usMailError']."'"." alt='error'>";
+                    <?php if(isset($_SESSION['errorMail'])){
+                        echo "<img id='croix' src='assets/img/croix.svg' title="."'".$_SESSION['errorMail']."'"." alt='error'>";
                     }?>
                 </div>
             </div>
@@ -168,7 +169,7 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                                     $options = "<option value='$value'";
                                 }
                                 if(isset($_SESSION['userSubject'])){
-                                    if($_SESSION['userSubject']==$key){
+                                    if($_SESSION['userSubject']==$value || $_SESSION['userSubject']==$key){
                                         $options.= "selected";
                                     }
                                 }
@@ -192,15 +193,15 @@ $subjectArray = array('Make Your Choice', 'Technical Support', 'Commercial Suppo
                 <div class="col-md-12 col-sm-12">
                     <?php
                     if (isset($_SESSION['userSubject'])) {
-                        if ($_SESSION['userSubject'] == "3") {
-                             echo "<input style='display:block' style='display:block' type='text' class='w-75 p-0' name='userElseSubject' id='formMesSubjectElse' placeholder='Enter your subject here' value='" . $_SESSION['userElseSubject'] . "'>";
+                        if ($_SESSION['userSubject'] === "3") {
+                             echo "<input style='display:block' style='display:block' type='text' class='w-75 p-0' name='userElseSubject' id='formMesSubjectElse' placeholder='Enter your subject here'>";
                         }
                         
-                    } else {
-                        echo "<input type='text' class='w-75 p-0' style='display:none' name='userElseSubject' id='formMesSubjectElse' placeholder='Enter your subject here'>";
-                         }
+                    } ?>
+                    <input type='text' class='w-75 p-0' style='display:none' name='userElseSubject' id='formMesSubjectElse' placeholder='Enter your subject here' value="<?php if(isset($_SESSION['userElseSubject'])){echo $_SESSION['userElseSubject'];}; ?>">
+                         
 
-                    ?>
+                    
                 </div>
             </div>
             <!-- 6ème ligne -->
