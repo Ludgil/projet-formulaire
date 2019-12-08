@@ -45,6 +45,14 @@ body #homeJumbo .jumbotron {
   width: 95%;
 }
 
+body #homeJumbo h1 {
+  font-size: 1.5rem !important;
+}
+
+body #homeJumbo h3 {
+  font-size: 1.3rem !important;
+}
+
 body #homeJumbo .container {
   width: 90% !important;
 }

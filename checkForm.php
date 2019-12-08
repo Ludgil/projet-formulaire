@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['sessionName'] = "sendForm";
 $_SESSION['error']=0;
-$datas                   = array(
+$datas = array( 
     'usFirstname'     => FILTER_SANITIZE_STRING,
     'usLastname'      => FILTER_SANITIZE_STRING,
     'usMail'          => FILTER_SANITIZE_EMAIL,
@@ -12,7 +12,8 @@ $datas                   = array(
     'userElseSubject' => FILTER_SANITIZE_STRING,
     'userMessage'     => FILTER_SANITIZE_STRING);
 
-    $result = filter_input_array(INPUT_POST, $datas);
+$result = filter_input_array(INPUT_POST, $datas);
+echo "<pre>".var_dump($result)."</pre>";
 // initialisation variable
 $firstName          = "";
 $firstNameMaxLength = 20;
@@ -50,6 +51,7 @@ function checkInput($str,$maxLength,$valueName,$illegal) {
     // check length
     if(strlen($str)<3 || strlen($str)>$maxLength){
         $_SESSION[$valueName."Error"]="Number of caracter incorrect<br>";
+        $_SESSION['error']=1;
     } if(strpbrk($str, $illegal) ==true){ // check illegal caracter
         if(isset($_SESSION[$valueName."Error"])){
             $_SESSION[$valueName."Error"].= "Illegal caracter found";
@@ -78,7 +80,7 @@ function checkSelect($str,$maxLength,$valueName,$illegal,$mess) {
 
 
 // check variable
- $pattern01 = "#$%^&*()+=[]'!;,./\{}|:<>?~0123456789";
+$pattern01 = "#$%^&*()+=[]'!;,./\{}|:<>?~0123456789";
 checkInput($result['usFirstname'], 20, 'userFirstname',$pattern01);
 checkInput($result['usLastname'], 20, 'userLastname',$pattern01);
 checkSelect($result['usCountry'], 60, 'userCountry',$pattern01,"Choose your Country");
@@ -97,8 +99,9 @@ checkInput($result['userMessage'], 2000, 'userMessage',"*");
 //$result['usMail']=filter_var($_POST['usMail'], FILTER_VALIDATE_EMAIL);
  checkMail(($result['usMail']));
 //$_SESSION['userMail']=$result['usMail'];
-//echo $_SESSION['error'];
-    if($_SESSION['error']==0){
+
+echo $_SESSION['error'];
+    if($_SESSION['error']== "0"){
         
         //we send a mail
         $to      = 'emile.markus@gmail.com';
@@ -112,13 +115,13 @@ checkInput($result['userMessage'], 2000, 'userMessage',"*");
         $message.= "userSubject :".$_SESSION['userSubject']."\r\n";
         $message.= "Subject :".$_SESSION['userElseSubject']."\r\n";
         $message.= "Message :".$_SESSION['userMessage']."\r\n";
-        echo $message;
+        
         $headers = $_SESSION['userMail'] . "\r\n" .
         'Reply-To: '.$_SESSION['userMail']."\r\n" .
         'X-Mailer: PHP/' . phpversion();
         if(@mail($to, $subject, $message, $headers)){
             $_SESSION['sendit']=true;
-            header('Location: form.php');
+           header('Location: form.php');
         }else{
             $_SESSION['sendit']=false;
            header('Location: form.php');
@@ -126,7 +129,7 @@ checkInput($result['userMessage'], 2000, 'userMessage',"*");
 
     }else{
         $_SESSION['error']=1;
-        header('Location: form.php');
+       header('Location: form.php');
     }
 
 
