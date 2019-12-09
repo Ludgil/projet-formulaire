@@ -34,6 +34,14 @@ body li.nav-item::hover {
   color: #252525;
 }
 
+body header h1 {
+  font-size: 1.5rem !important;
+}
+
+body header h3 {
+  font-size: 1.3rem !important;
+}
+
 body #homeJumbo {
   padding-bottom: 5vh !important;
   height: auto;
